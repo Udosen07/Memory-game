@@ -8,7 +8,7 @@ function App() {
     case "start":
       return <StartScreen start={() => setGameState("play")} />;
     case "play":
-      return <PlayScreen end={() => setGameState("start")} />;
+      return <PlayScreen start={() => setGameState("play")} />;
     default:
       throw new Error("Invalid game state " + gameState);
   }
